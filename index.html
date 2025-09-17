@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Bazar - Your Shopping Destination</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 50 50" width="40" height="40">
+                        <rect x="5" y="15" width="40" height="25" rx="5" fill="#ff6b35"/>
+                        <circle cx="15" cy="27" r="3" fill="#fff"/>
+                        <circle cx="35" cy="27" r="3" fill="#fff"/>
+                        <path d="M10 15 L12 10 L38 10 L40 15" stroke="#fff" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                <span class="logo-text">Click Bazar</span>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav" role="navigation">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#contact" class="nav-link">Contact Us</a>
+            </nav>
+
+            <!-- Right Section -->
+            <div class="right-section">
+                <button class="login-btn">Login</button>
+                <div class="cart-container">
+                    <button class="cart-btn" aria-label="Shopping cart" aria-expanded="false">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="currentColor"/>
+                        </svg>
+                        <span class="cart-count" aria-live="polite">0</span>
+                    </button>
+                
+                    <!-- Cart Dropdown -->
+                    <div class="cart-dropdown" role="dialog" aria-label="Shopping cart">
+                        <div class="cart-header">
+                            <h3>Shopping Cart</h3>
+                            <button class="close-cart" aria-label="Close cart">&times;</button>
+                        </div>
+                        <div class="cart-items"></div>
+                        <div class="cart-total">
+                            <strong>Total: ₹<span id="cart-total">0.00</span></strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <!-- Category Dropdown Menu -->
+    <section class="category-menu">
+        <div class="container">
+            <div class="category-nav">
+                <div class="category-item">
+                    <span>Electronics</span>
+                    <div class="dropdown">
+                        <a href="#">Smartphones</a>
+                        <a href="#">Laptops</a>
+                        <a href="#">Headphones</a>
+                        <a href="#">Cameras</a>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <span>Fashion</span>
+                    <div class="dropdown">
+                        <a href="#">Men's Clothing</a>
+                        <a href="#">Women's Clothing</a>
+                        <a href="#">Shoes</a>
+                        <a href="#">Accessories</a>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <span>Home & Furniture</span>
+                    <div class="dropdown">
+                        <a href="#">Living Room</a>
+                        <a href="#">Bedroom</a>
+                        <a href="#">Kitchen</a>
+                        <a href="#">Decor</a>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <span>Beauty & Skin Care</span>
+                    <div class="dropdown">
+                        <a href="#">Skincare</a>
+                        <a href="#">Makeup</a>
+                        <a href="#">Hair Care</a>
+                        <a href="#">Fragrances</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="container">
+            <section class="hero">
+                <h1>Welcome to Click Bazar</h1>
+                <p>Discover amazing products at unbeatable prices</p>
+            </section>
+
+            <!-- Promotional Sections -->
+            <section class="promo-section">
+                <div class="promo-card">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=200&fit=crop" alt="Electronics">
+                    <div class="promo-content">
+                        <h3>Best of Electronics</h3>
+                        <p>Up to 70% OFF</p>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=200&fit=crop" alt="Sports">
+                    <div class="promo-content">
+                        <h3>Sports Health Care & More</h3>
+                        <p>Up to 60% OFF</p>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=200&fit=crop" alt="Home Decor">
+                    <div class="promo-content">
+                        <h3>Home Decor & Furnishing</h3>
+                        <p>Up to 50% OFF</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category Filters -->
+            <section class="filters">
+                <button class="filter-btn active" data-category="all" aria-label="Show all products">All</button>
+                <button class="filter-btn" data-category="Electronics" aria-label="Show electronics">Electronics</button>
+                <button class="filter-btn" data-category="Apparel" aria-label="Show apparel">Apparel</button>
+            </section>
+
+            <!-- Products Grid -->
+            <section class="products-section" aria-label="Products">
+                <div class="products-grid" id="products-grid" role="grid">
+                    <!-- Products will be dynamically inserted here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ABOUT</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>HELP</h4>
+                    <ul>
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Cancellation & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Click Bazar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Indicator -->
+    <div class="loading" id="loading" aria-hidden="true">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
